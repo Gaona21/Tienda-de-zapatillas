@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Fira+Sans+Extra+Condensed:wght@100&display=swap");
+.titulo, .TituloNikeAdidas {
+  font-size: 40px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+main {
+  min-height: 90vh; }
+
+.menu, .contNav {
+  background: black; }
+
+.menu .logoMenu {
+  color: white;
+  font-size: 30px;
+  font-family: "Bebas Neue", cursive; }
+
+.menu .linkMenu {
+  color: white;
+  font-size: 18px;
+  font-family: "Bebas Neue", cursive; }
+
+.menu .cajaSubMenu {
+  background: black; }
+  .menu .cajaSubMenu .dropdown-item:hover {
+    background-color: black !important; }
+
+.carousel-inner {
+  height: 500px; }
+
+@media (max-width: 2560px) {
+  .carousel-inner {
+    height: 1000px; } }
+
+@media (max-width: 1440px) {
+  .carousel-inner {
+    height: 600px; } }
+
+@media (max-width: 1024px) {
+  .carousel-inner {
+    height: 390px; } }
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    height: 290px; } }
+
+@media (max-width: 425px) {
+  .carousel-inner {
+    height: 200px; } }
+
+.contenedorSubtitulo {
+  width: 90%;
+  margin: 20px auto;
+  border-top: 1px solid #dee2e6;
+  text-align: center; }
+  .contenedorSubtitulo .Subtitulo {
+    font-family: "Bebas Neue", cursive;
+    margin: 5px 0px 0px 0px; }
+  .contenedorSubtitulo .textoOferta {
+    color: black;
+    font-size: 20px;
+    font-family: "Bebas Neue", cursive;
+    margin: 0px; }
+
+.contenedorCategoriaNA {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .contenedorCategoriaNA .contenedorAdidas, .contenedorCategoriaNA .contenedorNike {
+    width: 50%;
+    margin: 10px 10px 10px 0px;
+    filter: blur(3px);
+    overflow: hidden; }
+    .contenedorCategoriaNA .contenedorAdidas .imgLogo, .contenedorCategoriaNA .contenedorNike .imgLogo {
+      width: 100%; }
+  .contenedorCategoriaNA .contenedorAdidas:hover {
+    box-shadow: 5px 5px 7px #aaaaaa;
+    transition: 0.5s;
+    filter: blur(0px); }
+    .contenedorCategoriaNA .contenedorAdidas:hover .imgLogo {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: 1s; }
+  .contenedorCategoriaNA .contenedorNike:hover {
+    box-shadow: 5px 5px 7px #aaaaaa;
+    transition: 0.5s;
+    filter: blur(0px); }
+    .contenedorCategoriaNA .contenedorNike:hover .imgLogo {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: 1s; }
+
+@media (max-width: 768px) {
+  .contenedorCategoriaNA .contenedorAdidas, .contenedorCategoriaNA .contenedorNike {
+    width: 50%;
+    margin: 10px 10px 10px 0px;
+    filter: blur(0px);
+    overflow: hidden; } }
+
+@media (max-width: 425px) {
+  .contenedorCategoriaNA {
+    display: none; } }
+
+.contenedorCard {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .contenedorCard .Card {
+    width: 27%;
+    height: 400px;
+    border: 1px solid #dee2e6;
+    border-radius: 1.5%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .contenedorCard .Card:hover {
+      box-shadow: 10px 10px 5px #dee2e6;
+      transition: 0.5s; }
+    .contenedorCard .Card .contenedorImgCard {
+      width: 100%;
+      height: 200px; }
+      .contenedorCard .Card .contenedorImgCard .imgCards {
+        width: 100%; }
+    .contenedorCard .Card .card-Body .tituloCard {
+      color: black;
+      font-size: 30px;
+      font-family: "Bebas Neue", cursive;
+      text-align: center;
+      height: 50px; }
+    .contenedorCard .Card .card-Body .botonCard {
+      display: block;
+      width: 100px;
+      text-decoration: none;
+      text-align: center;
+      margin: auto;
+      color: black;
+      background: #5778a3;
+      border-radius: 5px;
+      margin-bottom: 20px; }
+      .contenedorCard .Card .card-Body .botonCard:hover {
+        border-radius: 20px 100px;
+        transition: 2s; }
+    .contenedorCard .Card .card-Body .sinStock {
+      visibility: hidden; }
+
+@media (max-width: 2560px) {
+  .contenedorCard .Card {
+    height: 550px; } }
+
+@media (max-width: 1440px) {
+  .contenedorCard .Card {
+    height: 400px; } }
+
+@media (max-width: 1024px) {
+  .contenedorCard .Card {
+    height: 300px; }
+    .contenedorCard .Card .card-Body .tituloCard {
+      height: 60px; } }
+
+@media (max-width: 768px) {
+  .contenedorCard .Card {
+    width: 47%; }
+    .contenedorCard .Card .contenedorImgCard {
+      height: 390px; } }
+
+@media (max-width: 425px) {
+  .contenedorCard {
+    flex-direction: column;
+    align-content: space-around; }
+    .contenedorCard .Card {
+      width: 90%;
+      height: 350px; } }
+
+.piePagina {
+  width: 100%;
+  background: black;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  text-align: center; }
+  .piePagina .infoCreador {
+    width: 70%;
+    color: white;
+    font-size: 18px;
+    font-family: "Bebas Neue", cursive;
+    margin-top: 20px; }
+  .piePagina .menuRedesSociales {
+    width: 30%;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    font-family: "Bebas Neue", cursive; }
+
+@media (max-width: 425px) {
+  .piePagina {
+    flex-direction: column-reverse;
+    align-items: center;
+    display: flex; }
+    .piePagina .menuRedesSociales {
+      margin-top: 10px; } }
+
+.contenedorZapatillas {
+  width: 90%;
+  border: 1px solid #dee2e6;
+  display: grid;
+  grid-template-areas: "cuadroUno liniaMedio cuadroDos";
+  grid-template-rows: 100%;
+  grid-template-columns: 49% 1px 49%;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px; }
+  .contenedorZapatillas .contenedorImg {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    grid-area: cuadroUno; }
+    .contenedorZapatillas .contenedorImg .imgZapatillas {
+      width: 100%; }
+  .contenedorZapatillas .separadorVertical {
+    border: 1px solid #dee2e6;
+    grid-area: liniaMedio; }
+  .contenedorZapatillas .contenedorBody {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    grid-area: cuadroDos; }
+    .contenedorZapatillas .contenedorBody .botonComprar {
+      width: 150px;
+      margin: auto;
+      background: #5778a3;
+      border-radius: 5px;
+      border: none;
+      padding: 5px; }
+
+@media (max-width: 768px) {
+  .contenedorZapatillas .contenedorImg {
+    height: 550px; }
+  .contenedorZapatillas .contenedorBody {
+    height: 550px; } }
+
+@media (max-width: 425px) {
+  .contenedorZapatillas {
+    width: 90%;
+    display: grid;
+    grid-template-areas: "cuadroUno" "liniaMedio" "cuadroDos";
+    grid-template-rows: 30% 1px 49%;
+    grid-template-columns: 100%; }
+    .contenedorZapatillas .contenedorImg {
+      width: 100%;
+      height: 210px;
+      margin-bottom: 0px;
+      border: none; }
+      .contenedorZapatillas .contenedorImg .imgZapatillas {
+        width: 100%; }
+    .contenedorZapatillas .contenedorBody {
+      width: 100%;
+      border: none; } }
+
+.ContenedorSugerencia {
+  width: 90%;
+  margin: 25px  auto 25px; }
+  .ContenedorSugerencia--Card {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll; }
+    .ContenedorSugerencia--Card .sugerencia {
+      width: 310px;
+      margin: 5px 50px 5px 0px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px; }
+      .ContenedorSugerencia--Card .sugerencia img {
+        width: 300px; }
+
+.contenedorFormulario {
+  min-height: 90vh;
+  width: 100%; }
+
+@media (max-width: 1024px) {
+  .contenedorFormulario {
+    height: 1100%; } }
+
+
+    .reviews-section {
+      padding: 2rem;
+      background-color: #f9f9f9; /* Puedes ajustar el color de fondo */
+      color: #333;
+  }
+  
+  .reviews-section h2 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333; /* Ajusta el color según tu paleta */
+  }
+  
+  .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+  }
+  
+  .review {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .review p {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      color: #555;
+  }
+  
+  .review span {
+      font-size: 0.9rem;
+      color: #888;
+  }
+  
+  /* Responsive adjustments */
+@media (max-width: 600px) {
+  .reviews-section {
+      padding: 1rem;
+  }
+
+  .reviews-section h2 {
+      font-size: 1.5rem;
+  }
+
+  .review {
+      padding: 0.75rem;
+  }
+
+  .review p {
+      font-size: 0.9rem;
+  }
+
+  .review span {
+      font-size: 0.8rem;
+  }
+}
