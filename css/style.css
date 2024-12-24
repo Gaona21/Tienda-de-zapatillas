@@ -133,9 +133,12 @@ main {
       transition: 0.5s; }
     .contenedorCard .Card .contenedorImgCard {
       width: 100%;
-      height: 200px; }
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
       .contenedorCard .Card .contenedorImgCard .imgCards {
-        width: 100%; }
+        width: 90%; }
     .contenedorCard .Card .card-Body .tituloCard {
       color: black;
       font-size: 30px;
@@ -372,4 +375,23 @@ main {
   .review span {
       font-size: 0.8rem;
   }
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
