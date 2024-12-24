@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    updateCartCount();
     const loader = document.getElementById('loader');
     loader.style.display = 'block';
 
@@ -33,9 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <li class="list-group-item">Marca: ${zapatilla.marca}</li>
                                 </ul>
                             </div>
-                            <input class="botonComprar" type="submit" name="enviar" value="Comprar">
+                            <button class="botonComprar" id="add-to-cart-btn">Comprar</button>
                         </div>
                     `;
+
+                    document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+                        addToCart(zapatilla);
+                        alert('Zapatilla agregada al carrito');
+                    });
                     
                     cargarSugerencias(data, zapatillaId);
                     loader.style.display = 'none';
@@ -72,4 +78,21 @@ function cargarSugerencias(data, zapatillaId) {
 function seleccionarAleatorias(array, num) {
     const shuffled = array.sort(() => 0.5 - Math.random()); // Mezclar el array
     return shuffled.slice(0, num); // Devolver los primeros 'num' elementos
+}
+
+function getCart() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+function addToCart(item) {
+    const cart = getCart();
+    cart.push(item);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+}
+
+function updateCartCount() {
+    const cart = getCart();
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = cart.length;
 }
