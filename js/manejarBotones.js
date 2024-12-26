@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    updateCartCount()
     const checkButtons = setInterval(() => {
         const botonesVerMas = document.querySelectorAll(".botonCard");
         if (botonesVerMas.length) {
@@ -14,3 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 100);
 });
+
+function getCart() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+}
+
+function updateCartCount() {
+    const cart = getCart();
+    const cartCount = document.getElementById('cart-count');
+    cartCount.textContent = cart.length;
+}

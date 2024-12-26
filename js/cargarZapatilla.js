@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     document.getElementById('add-to-cart-btn').addEventListener('click', () => {
                         addToCart(zapatilla);
-                        alert('Zapatilla agregada al carrito');
+                        showModal(); // Mostrar el modal cuando se agrega al carrito
                     });
-                    
+
                     cargarSugerencias(data, zapatillaId);
                     loader.style.display = 'none';
                 } else {
@@ -76,8 +76,8 @@ function cargarSugerencias(data, zapatillaId) {
 }
 
 function seleccionarAleatorias(array, num) {
-    const shuffled = array.sort(() => 0.5 - Math.random()); // Mezclar el array
-    return shuffled.slice(0, num); // Devolver los primeros 'num' elementos
+    const shuffled = array.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
 }
 
 function getCart() {
@@ -86,7 +86,22 @@ function getCart() {
 
 function addToCart(item) {
     const cart = getCart();
-    cart.push(item);
+
+    const zapatilla = {
+        id: item.id,
+        nombre: item.nombre,
+        precio: item.precio,
+        img: item.img,
+    };
+
+    const productoExistente = cart.find(producto => producto.id === zapatilla.id);
+
+    if (productoExistente) {
+        productoExistente.cantidad += 1;
+    } else {
+        cart.push({ ...zapatilla, cantidad: 1 });
+    }
+
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
 }
@@ -95,4 +110,26 @@ function updateCartCount() {
     const cart = getCart();
     const cartCount = document.getElementById('cart-count');
     cartCount.textContent = cart.length;
+}
+
+function showModal() {
+    const modal = document.getElementById('cart-modal');
+    const closeBtn = modal.querySelector('.close-btn');
+    const goToCartBtn = document.getElementById('go-to-cart');
+
+    modal.style.display = 'block';
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    goToCartBtn.addEventListener('click', () => {
+        window.location.href = 'carrito.html';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 }

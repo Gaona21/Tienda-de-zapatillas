@@ -18,7 +18,7 @@ fetch('../json/zapatillas.json')
                     </div>
                     <div class="card-Body">
                         <h5 class="tituloCard">${producto.nombre}</h5>
-                        <a href="paginas/${producto.nombre.replace(/\s+/g, '')}.html" class="botonCard">Ver más</a>
+                        <a href="../paginas/zapatilla.html" class="botonCard" data-id="${producto.id}">Ver más</a>
                     </div>
                 `;
                 container.appendChild(cardDiv);
